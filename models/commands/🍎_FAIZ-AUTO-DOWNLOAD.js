@@ -17,7 +17,7 @@ module.exports = {
     const fs = require("fs-extra");
     const content = event.body ? event.body : "";
     const body = content.toLowerCase();
-    const { alldown } = require("nayan-media-downloader");
+    const { alldown } = require("prem-babu-media");
     if (body.startsWith("https://")) {
       api.setMessageReaction("📿", event.messageID, (err) => {}, true);
       const data = await alldown(content);
