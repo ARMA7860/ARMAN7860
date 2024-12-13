@@ -11,7 +11,7 @@ module.exports.config = {
 module.exports.handleEvent = async function({ api, event, client, Users, __GLOBAL }) {
   var { threadID, messageID } = event;
   var name = await Users.getNameUser(event.senderID);
-  if (event.body.indexOf("asalamu alaikum")>=0 || event.body.indexOf("assalamu alaikkum")>=0 || event.body.indexOf("Assalamu alaikkum")>=0 || event.body.indexOf("ASALAMU ALAIKUM")>=0 || event.body.indexOf("Assalamualaikum")>=0 || event.body.indexOf("Assalamu Alaikum")>=0 || event.body.indexOf("Asslam alikum good moring")>=0 || event.body.indexOf("Salam")>=0 || event.body.indexOf("asalam")>=0 || event.body.indexOf("Assalam alaikum")>=0 ) { 
+  if (event.body.indexOf("asalamu alaikum")>=0 || event.body.indexOf("assalamu alaikkum")>=0 || event.body.indexOf("Assalamu alaikkum")>=0 || event.body.indexOf("ASALAMU ALAIKUM")>=0 || event.body.indexOf("Assalamualaikum")>=0 || event.body.indexOf("Assalamu Alaikum")>=0 || event.body.indexOf("Asslam alikum good moring")>=0 || event.body.indexOf("Asalamualaikum")>=0 || event.body.indexOf("Asssalamuailekum")>=0 || event.body.indexOf("Assalam alaikum")>=0 ) { 
     var msg = {
         body: ` ${name} ♥ W'aleykum Assalam Wa'rahmatullahi Wa'barakatuh ❤️`
       }
