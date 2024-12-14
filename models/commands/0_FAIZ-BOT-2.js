@@ -71,8 +71,8 @@ module.exports.handleEvent = async function({ api, event, args, Threads, Users }
   
   if (event.body.includes("jaan") == 1 ||
       (event.body.includes("Jaan") == 1 ||
-       (event.body.includes("Babu") == 1 ||
-      (event.body.includes("babu") == 1)))) {
+       (event.body.includes("ARMAN") == 1 ||
+      (event.body.includes("OYE") == 1)))) {
     var msg = {
       body: `✧════•❁${name}❁•════✧\n\n ${rand}`
     }
