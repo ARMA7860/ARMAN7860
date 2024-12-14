@@ -29,7 +29,7 @@ module.exports.handleEvent = async function({ api, event, args, Threads, Users }
   ////////////////@prem-babu3608/////////////////
    mess = "{name}"
   
-  if (event.body.includes("BOTT") == 1 || (event.body.includes("BOT") == 1)) {
+  if (event.body.includes("BABU") == 1 || (event.body.includes("babu") == 1)) {
     var msg = {
       body: `🐥 ${name} 🐥\n\n 👉${rand} \n\n   ❁ ══════ ❃ फैज अंसारी ❃ ══════ ❁`
     }
