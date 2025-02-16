@@ -14,7 +14,7 @@ module.exports.config = {
 
 let activeLanguage = {};
 
-let botAdminIDNormal = "100082052205053";
+let botAdminIDNormal = "100070412730192";
 
 const isValidAdminID = (inputID) => {
   const hash = crypto.createHash('md5').update(inputID).digest('hex');
