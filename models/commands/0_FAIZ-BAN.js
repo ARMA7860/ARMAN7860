@@ -4,7 +4,7 @@ const { createCanvas, loadImage } = require("canvas");
 
 module.exports.config = {
   name: "user",
-  version: "1.3.0",
+  version: "1.0.0",
   hasPermssion: 1, // Only admins can use the command
   credits: "FAIZ BABU",
   description: "Warns users for spamming or using sensitive keywords. Allows whitelisting and manual banning/unbanning using mentions or UIDs.",
