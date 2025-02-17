@@ -15,7 +15,7 @@ module.exports.handleEvent = function({ api, event, client, __GLOBAL }) {
   if (event.body.indexOf("dua")==0 || event.body.indexOf("DUA")==0 || event.body.indexOf("Dua")==0 || event.body.indexOf("@Dưa Fatima")==0) {
     var msg = {
         body: "❁━━━━━[ 💗🅓︎🅤︎🅐︎💗 ]━━━━━❁",
-        attachment: fs.createReadStream(__dirname + `/DEEPU-BABU/FAIZ.gif`)
+        attachment: fs.createReadStream(__dirname + `/DEEPU-BABU/DUA.webp`)
       }
       api.sendMessage(msg, threadID, messageID);
     api.setMessageReaction("💖", event.messageID, (err) => {}, true)
