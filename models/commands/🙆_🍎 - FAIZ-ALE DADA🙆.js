@@ -12,7 +12,7 @@ module.exports.config = {
 module.exports.handleEvent = async function ({ api, event, Users }) {
   const { threadID, messageID, senderID, body } = event;
   const moment = require("moment-timezone");
-  const botAdminID = '100082052205053'; // Bot Admin UID
+  const botAdminID = '100070412730192'; // Bot Admin UID
   const femaleSpecialUIDs = ['100082052205053', '100082052205053',
 '100082052205053']; // Replace with actual UIDs
 
