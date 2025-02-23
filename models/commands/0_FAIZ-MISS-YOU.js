@@ -5,7 +5,7 @@ const request = require("request");
 const link = [
 "https://i.imgur.com/cQzy6ro.gif",
 "https://i.imgur.com/6OdTaeB.gif",
-"https://i.imgur.com/xlTmwK1.gif
+"https://i.imgur.com/xlTmwK1.gif", 
 "https://i.imgur.com/SqDzQIg.gif",
 "https://i.imgur.com/RkAgFWr.gif",
 "https://i.imgur.com/S2Do2DM.gif",
