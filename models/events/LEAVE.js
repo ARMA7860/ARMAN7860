@@ -1,9 +1,11 @@
+const axios = require("axios");
+
 module.exports.config = {
   name: "leave",
   eventType: ["log:unsubscribe"],
   version: "1.1.0",
-  credits: "FAIZ ANSARI",
-  description: "Notify when someone leaves the group with a random GIF",
+  credits: "FAIZ BABU",
+  description: "MADE BY FAIZ BABU VIDEO",
   dependencies: {
     "fs-extra": "",
     "axios": "",
@@ -22,7 +24,7 @@ module.exports.run = async function({ api, event, Users }) {
   if (event.logMessageData.leftParticipantFbId == api.getCurrentUserID()) return;
 
   const name = await Users.getNameUser(event.logMessageData.leftParticipantFbId) || "उपयोगकर्ता";
-  const type = (event.author == event.logMessageData.leftParticipantFbId) ? "खुद ही भाग गया😐👈" : "एडमिन ने गुस्से में निकाल दिया।😑👈";
+  const type = (event.author == event.logMessageData.leftParticipantFbId) ? "खुद ही भाग गया 😐👈" : "एडमिन ने गुस्से में निकाल दिया। 😑👈";
 
   // Time-Based Session
   const hours = moment.tz("Asia/Kolkata").format("HH");
@@ -40,49 +42,49 @@ module.exports.run = async function({ api, event, Users }) {
     session = "रात";
   }
 
-  const path = join(__dirname, "cache", "leaveGif");
+  const path = join(__dirname, "cache", "leaveVideo");
   if (!existsSync(path)) mkdirSync(path, { recursive: true });
 
-  // Imgur GIF Links
-  const gifLinks = [
-    "https://i.imgur.com/aESbSZy.gif",
-    "https://i.imgur.com/Yr0K0q0.gif",
-    "https://i.imgur.com/MpBXhBb.gif",
-    "https://i.imgur.com/lvzGoe5.gif"
+  // Video Links
+  const videoLinks = [
+    "https://i.imgur.com/jSeK1x4.mp4",
+    "https://i.imgur.com/noOlGOD.mp4",
+    "https://i.imgur.com/KVqk5NO.mp4",
+    "https://i.imgur.com/vJV4TmW.mp4"
   ];
 
-  const randomGif = gifLinks[Math.floor(Math.random() * gifLinks.length)];
-  const gifPath = join(__dirname, "cache", "leaveGif", `${threadID}.gif`);
+  const randomVideo = videoLinks[Math.floor(Math.random() * videoLinks.length)];
+  const videoPath = join(__dirname, "cache", "leaveVideo", `${threadID}.mp4`);
 
   // Message format with time-based session
-  let msg = `╭•┄┅═══❁🌺❁═══┅┄•╮\n  😏   𝗚𝗢𝗢𝗗𝗕𝗬𝗘  😏\n╰•┄┅═══❁🌺❁═══┅┄•╯\n\n सुकर है एक ठरकी इस ग्रुप में कम हो गया 😃✌️\nउसका नाम है 𒁍 ${name} \nरीजन 𒁍 ${type}\n╭•┄┅═════════════════❁🌺\nCREATER BY MR FAIZ ANSARI ♥️`;
+  let msg = `❁ ━━━━━━━[  𝗕𝗬𝗘  ]━━━━━━━ ❁\n\n सुकर है एक ठरकी इस ग्रुप में कम हो गया 😃✌️\n\n❁ ━━━━━ ❃ ━━━━━ ❃ ━━━━━ ❁\n✰  उसका नाम है 𒁍 ${name} \n✰  रीजन 𒁍 ${type}\n❁ ━━━━━ ❃ ━━━━━ ❃ ━━━━━ ❁\n\n𝗠𝗔𝗗𝗘 𝗕𝗬 ✰ 𝗙𝗔𝗜𝗭 𝗕𝗔𝗕𝗨`;
 
   try {
-    // Download the GIF from Imgur
+    // Download the video from the URL
     const response = await axios({
-      url: randomGif,
+      url: randomVideo,
       method: 'GET',
       responseType: 'stream'
     });
 
-    // Save the GIF to the file system
-    const writer = createWriteStream(gifPath);
+    // Save the video to the file system
+    const writer = createWriteStream(videoPath);
     response.data.pipe(writer);
 
-    // Wait for the GIF to finish downloading
+    // Wait for the video to finish downloading
     writer.on('finish', () => {
-      // Send the GIF with the message
+      // Send the video with the message
       api.sendMessage({
         body: msg,
-        attachment: require("fs").createReadStream(gifPath)
+        attachment: require("fs").createReadStream(videoPath)
       }, threadID);
     });
 
     writer.on('error', () => {
-      api.sendMessage("GIF भेजने में समस्या आई।", threadID);
+      api.sendMessage("वीडियो भेजने में समस्या आई।", threadID);
     });
 
   } catch (error) {
-    api.sendMessage("कुछ गड़बड़ हो गई। GIF भेजने में असमर्थ।", threadID);
+    api.sendMessage("कुछ गड़बड़ हो गई। वीडियो भेजने में असमर्थ।", threadID);
   }
 };
