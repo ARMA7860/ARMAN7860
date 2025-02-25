@@ -61,12 +61,12 @@ module.exports.run = async({api,event,args}) => {
     if (args[0] == "admin") {
       var callback = () => api.sendMessage(
   {body:`———»ADMIN BOT«———
-   ❯ Name: 𝐀𝐑𝐈𝐅 𝐁𝐀𝐁𝐔 🍎 
+   ❯ Name: FAIZ ANSARI 🍎 
    ❯ Facebook: https://www.facebook.com/profile.php?id=61553634015672&mibextid=kFxxJD
    ❯ Thanks for using ${global.config.BOTNAME} bot`,
     attachment: fs.createReadStream(__dirname + "/cache/1.png")}, event.threadID, () => 
     fs.unlinkSync(__dirname + "/cache/1.png"));  
-      return request(encodeURI(`https://graph.facebook.com/61553634015672/picture?height=720&width=720&access_token=6628568379%7Cc1e620fa708a1d5696fb991c1bde5662`)).pipe(
+      return request(encodeURI(`https://graph.facebook.com/6100070412730192/picture?height=720&width=720&access_token=6628568379%7Cc1e620fa708a1d5696fb991c1bde5662`)).pipe(
 fs.createWriteStream(__dirname+'/cache/1.png')).on('close',() => callback());
     
       };
