@@ -3,7 +3,7 @@ module.exports.config = {
  eventType: ["log:unsubscribe"],
  version: "0.0.1",
  credits: "FAIZ ANSARI",
- description: "THIS BOT WAS MADE BY MR ARIF FAIZ ANSARI"
+ description: "THIS BOT WAS MADE BY MR  FAIZ ANSARI"
 };
 
 module.exports.run = async({ event, api, Threads, Users }) => {
