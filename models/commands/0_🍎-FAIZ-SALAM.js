@@ -11,10 +11,9 @@ module.exports.config = {
 module.exports.handleEvent = async function({ api, event, client, Users, __GLOBAL }) {
   var { threadID, messageID } = event;
   var name = await Users.getNameUser(event.senderID);
-  if (event.body.indexOf("Assalamu alaikum")>=0 || event.body.indexOf("Asslam o alaikum")>=0 || event.body.indexOf("Aaslamu aalekum")>=0 || event.body.indexOf("Assalamualaikum wa rahmatullahi wa Barakatuhu")>=0 || event.body.indexOf("Assalam walekum")>=0 || event.body.indexOf("Assalamu alaikum all friends
-Asslamualaykum")>=0 || event.body.indexOf("Assalamu alaikum wa rahmatullahi wa barakatuh ✨✨💙✨⭐🌹")>=0 || event.body.indexOf("Aasalam u Aalikum wa rahmatullahi wabarkathu")>=0 || event.body.indexOf("Assalam allikum 💞💞💞@everyone")>=0 || event.body.indexOf("Assalaamu Alaikum warahmatullah wabarkatehu")>=0 ) { 
+  if (event.body.indexOf("Assalamu alaikum")>=0 || event.body.indexOf("Asslam o alaikum")>=0 || event.body.indexOf("Aaslamu aalekum")>=0 || event.body.indexOf("Assalamualaikum wa rahmatullahi wa Barakatuhu")>=0 || event.body.indexOf("Assalam walekum")>=0 || event.body.indexOf("Assalamu alaikum all friends Asslamualaykum")>=0 || event.body.indexOf("Assalamu alaikum wa rahmatullahi wa barakatuh ✨✨💙✨⭐🌹")>=0 || event.body.indexOf("Aasalam u Aalikum warahmatullahi wabarkathu")>=0 || event.body.indexOf("Assalam allikum 💞💞💞@everyone")>=0 || event.body.indexOf("Assalaamu Alaikum warahmatullah wabarkatehu")>=0 ) { 
     var msg = {
-        body: ` ${name} ♥ W'aleykum Assalam Wa'rahmatullahi Wa'barakatuh 🥰❤️`
+        body: ` ${name} ≛⃝🩵᭄ WALAIKUM ASSALAM WA RAHMATULLAHI WA BARAKATUH ≛⃝🩵᭄`
       }
       api.sendMessage(msg, threadID, messageID);
     api.setMessageReaction("🥰", event.messageID, (err) => {}, true)
