@@ -14,7 +14,7 @@ module.exports.handleEvent = function({ api, event, client, __GLOBAL }) {
   var { threadID, messageID } = event;
   if (event.body.indexOf("@Alhaan Khan")==0 || event.body.indexOf("ALHAAN")==0 || event.body.indexOf("alhaan")==0 || event.body.indexOf("Alhaan khan")==0) {
     var msg = {
-        body: "❁━━━━━[🅐︎🅛︎🅗︎🅐︎🅐︎🅝︎]━━━━━❁",
+        body: "❁━━━━[🅐︎🅛︎🅗︎🅐︎🅐︎🅝︎]━━━━❁",
         attachment: fs.createReadStream(__dirname + `/FAIZ/ARAHAN.jpeg`)
       }
       api.sendMessage(msg, threadID, messageID);
