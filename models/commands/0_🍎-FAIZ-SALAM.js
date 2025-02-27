@@ -1,5 +1,5 @@
 module.exports.config = {
-  name: "assalamu Alaikum",
+  name: "Assalamu Alaikum",
   version: "7.3.1",
   hasPermssion: 0,
   credits: "FAIZ ANSARI", 
