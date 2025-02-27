@@ -15,7 +15,7 @@ module.exports.handleEvent = function({ api, event, client, __GLOBAL }) {
   if (event.body.indexOf("@Hoor Parii")==0 || event.body.indexOf("Hoor parii")==0 || event.body.indexOf("Hoor")==0 || event.body.indexOf("HOOR")==0) {
     var msg = {
         body: "❁━━━━━[🅗︎🅞︎🅞︎🅡︎ 🧚]━━━━━❁",
-        attachment: fs.createReadStream(__dirname + `/FAIZ/HOOR.webp`)
+        attachment: fs.createReadStream(__dirname + `/FAIZ/HOORR.webp`)
       }
       api.sendMessage(msg, threadID, messageID);
     api.setMessageReaction("🧚", event.messageID, (err) => {}, true)
