@@ -44,15 +44,15 @@ module.exports.handleEvent = async function({ api, event, args, Threads, Users }
      return api.sendMessage("ये बी सी किया होता है। 🤔👈 ", threadID);
    };
 
-   if ((event.body.toLowerCase() == "manshi") ||(event.body.toLowerCase() == "manshi babu")) {
-     return api.sendMessage("मानसी सिर्फ मेरी बाबू है तू मेरी बाबू पे लाइन ना मार ठरकी कही का 🤨🤬", threadID);
+   if ((event.body.toLowerCase() == "Aslaam O Alikum kasy ha ap") ||(event.body.toLowerCase() == "Aslaam O Alikum kasy ha ap sab hai")) {
+     return api.sendMessage("⎯͢⎯Ꮗ𝐚͡𝐥īīī𝐤𝐮̊𝐦͡𝐚͡𝐬͡𝐥𝐚𝐦͡-"♡🩷🪽", threadID);
    };
 
    if ((event.body.toLowerCase() == "koi hai") || (event.body.toLowerCase() == "koi h")) {
      return api.sendMessage("मैं हूं ना जानेमन 🙂🤟", threadID);
    };
   
-  if ((event.body.toLowerCase() == "Faiz") || (event.body.toLowerCase() == "Faizu")) {
+  if ((event.body.toLowerCase() == "Faiz") || (event.body.toLowerCase() == "faizu")) {
      return api.sendMessage("मेरा बॉस फैज अंसारी बीजी है सायद किसी काम में मुझे बताओ किया काम है। मैं बॉस को बता दूंगा 🙂✌️ ", threadID);
    };
 
