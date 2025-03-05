@@ -12,7 +12,7 @@ module.exports.config = {
 
 module.exports.handleEvent = function({ api, event, client, __GLOBAL }) {
   var { threadID, messageID } = event;
-  if (event.body.indexOf("ARMAN")==0 || event.body.indexOf("@Ansari Bot")==0 || event.body.indexOf("@Arman Babu")==0 || event.body.indexOf("Arman babu")==0) {
+  if (event.body.indexOf("@अरमान बाबू")==0 || event.body.indexOf("@Ansari Bot")==0 || event.body.indexOf("@Arman Babu")==0 || event.body.indexOf("Arman babu")==0) {
     var msg = {
         body: "ओये हेलो मै इधर हु बाबू 😹",
         attachment: fs.createReadStream(__dirname + `/FAIZ/ARMAN.gif`)
